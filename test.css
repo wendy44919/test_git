@@ -1,0 +1,35 @@
+.inline-block {
+  display: inline-block;
+}
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.container {
+  display: inline-block;
+}
+.container .red {
+  color: #ff0000;
+  background: url("../img/imag.png") no-repeat center;
+}
+@media screen and min-width (480px) {
+  .container .red {
+    color: #fff;
+  }
+}
+.unimportant {
+  background: #f5f5f5;
+  color: #990000;
+}
+.important {
+  background: #f5f5f5 !important;
+  color: #990000 !important;
+}
