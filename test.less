@@ -1,0 +1,46 @@
+@import "less.less";
+
+@color-red: red;
+@img-path: "../img";
+@mobile-small-size: 480px; //
+
+.inline-block{
+	display: inline-block;
+}
+.clearfix{
+	display: block;
+	zoom: 1;
+
+	&:after{
+		content: " ";
+		display: block;
+		font-size: 0;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+}
+
+.container{
+	.inline-block;
+	.red{
+		color: @color-red;
+		background: url("@{img-path}/imag.png") no-repeat center;
+
+		@media screen and min-width(@mobile-small-size){
+			color: #fff;
+		}
+	}
+}
+
+.foo (@bg: #f5f5f5, @color: #900) {
+  background: @bg;
+  color: @color;
+}
+.unimportant {
+  .foo();
+}
+.important {
+  .foo() !important;
+}
+
